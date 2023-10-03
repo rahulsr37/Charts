@@ -76,8 +76,8 @@ const LeftSideBar = () => {
           </ul>
         </div>
 
-        <div>
-          <button className="mt-36 opacity-70" onClick={handleLogout}>
+        <div className="absolute bottom-8">
+          <button className=" opacity-70" onClick={handleLogout}>
             <span className="flex flex-row">
               <img
                 width="30"

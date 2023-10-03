@@ -24,8 +24,6 @@ const Login = () => {
       })
     );
     navigate("/");
-
-    console.log(`Form Submitted`);
   };
 
   return (
@@ -100,7 +98,7 @@ const Login = () => {
 
                 <div className="flex items-center justify-center">
                   <p className="font-medium text-gray-600 hover:underline">
-                    <Link to="/signup">FORGOT YOUR PASSWORD</Link>
+                    <Link to="/">FORGOT YOUR PASSWORD</Link>
                   </p>
                 </div>
                 <div className="bottonBtns flex w-full">

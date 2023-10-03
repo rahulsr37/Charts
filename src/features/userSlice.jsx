@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const user = localStorage.getItem("user")
+const user = localStorage.getItem("user");
 
 export const userSlice = createSlice({
   name: "user",
@@ -9,6 +9,11 @@ export const userSlice = createSlice({
   },
   reducers: {
     login: (state, action) => {
+      const loginCreds = action.payload;
+      if (!loginCreds.name || !loginCreds.email || !loginCreds.password) {
+        alert(`Enter credentials for login!`);
+        return;
+      }
       state.user = action.payload;
       localStorage.setItem("user", JSON.stringify(action.payload));
     },
